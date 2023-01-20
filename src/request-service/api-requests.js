@@ -93,7 +93,7 @@ export const uploadToGiphy = async (file) => {
   formData.append('username', '');
   formData.append('file', file);
 
-  let data = await fetch('http://upload.giphy.com/v1/gifs', {
+  let data = await fetch('https://upload.giphy.com/v1/gifs', {
     method: 'POST',
     body: formData,
   });
