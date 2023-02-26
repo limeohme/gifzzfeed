@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         alert(error);
       }
     }
-  }, 400);
+  }, 600);
   window.ontouchend = debounce(() => {
     const isActive = document
       .querySelector('[data-target-page="trending"]')
@@ -147,5 +147,5 @@ document.addEventListener('DOMContentLoaded', async () => {
         alert(error);
       }
     }
-  }, 400);
+  }, 600);
 });
