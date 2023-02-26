@@ -113,22 +113,4 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
   }, 600);
-
-  window.ontouchmove = debounce(async function () {
-    const isActive = document
-      .querySelector('[data-target-page="trending"]')
-      .classList.contains('active');
-    const isPageEnd =
-    window.innerHeight + window.scrollY >= document.body.offsetHeight;
-
-    if (isActive && isPageEnd && !q(LOGO).classList.contains('active')) {
-      try {
-        offsetTrending += limit;
-        if (offsetTrending === 4999) offsetTrending = 0;
-        renderAdditionalTrending(limit, offsetTrending);
-      } catch (error) {
-        alert(error);
-      }
-    }
-  }, 600);
 });
