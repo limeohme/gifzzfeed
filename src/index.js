@@ -114,12 +114,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }, 600);
 
-  window.ontouchmove = () => {
+  window.ontouchmove = debounce(() => {
     const isActive = document
       .querySelector('[data-target-page="trending"]')
       .classList.contains('active');
-    const isPageEnd =
-    window.innerHeight + window.scrollY >= document.body.offsetHeight;
+    // const isPageEnd =
+    // window.innerHeight + window.scrollY >= document.body.offsetHeight;
 
     if (isActive) {
       try {
@@ -130,13 +130,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         alert(error);
       }
     }
-  }
-  window.ontouchend = () => {
+  }, 400);
+  window.ontouchend = debounce(() => {
     const isActive = document
       .querySelector('[data-target-page="trending"]')
       .classList.contains('active');
-    const isPageEnd =
-    window.innerHeight + window.scrollY >= document.body.offsetHeight;
+    // const isPageEnd =
+    // window.innerHeight + window.scrollY >= document.body.offsetHeight;
 
     if (isActive) {
       try {
@@ -147,5 +147,5 @@ document.addEventListener('DOMContentLoaded', async () => {
         alert(error);
       }
     }
-  }
+  }, 400);
 });
