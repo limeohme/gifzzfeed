@@ -118,10 +118,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const isActive = document
       .querySelector('[data-target-page="trending"]')
       .classList.contains('active');
-    // const isPageEnd =
-    // window.innerHeight + window.scrollY >= document.body.offsetHeight;
+    const isPageEnd =
+    window.innerHeight + window.scrollY >= document.body.offsetHeight;
 
-    if (isActive) {
+    if (isActive && isPageEnd) {
       try {
         offsetTrending += limit;
         if (offsetTrending === 4999) offsetTrending = 0;
@@ -130,15 +130,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         alert(error);
       }
     }
-  }, 1000);
+  }, 400);
   window.ontouchend = debounce(() => {
     const isActive = document
       .querySelector('[data-target-page="trending"]')
       .classList.contains('active');
-    // const isPageEnd =
-    // window.innerHeight + window.scrollY >= document.body.offsetHeight;
+    const isPageEnd =
+    window.innerHeight + window.scrollY >= document.body.offsetHeight;
 
-    if (isActive) {
+    if (isActive && isPageEnd) {
       try {
         offsetTrending += limit;
         if (offsetTrending === 4999) offsetTrending = 0;
@@ -147,5 +147,5 @@ document.addEventListener('DOMContentLoaded', async () => {
         alert(error);
       }
     }
-  }, 1000);
+  }, 400);
 });
