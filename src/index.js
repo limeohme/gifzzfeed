@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       .querySelector('[data-target-page="trending"]')
       .classList.contains('active');
     const isPageEnd =
-    window.innerHeight + window.scrollY >= document.body.offsetHeight;
+    window.innerHeight + Math.ceil(window.scrollY) >= document.body.offsetHeight;
 
     if (isActive && isPageEnd) {
       try {
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       .querySelector('[data-target-page="trending"]')
       .classList.contains('active');
     const isPageEnd =
-    window.innerHeight + window.scrollY >= document.body.offsetHeight;
+    window.innerHeight + Math.ceil(window.scrollY) >= document.body.offsetHeight;
 
     if (isActive && isPageEnd) {
       try {
