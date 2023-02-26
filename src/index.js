@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const isPageEnd =
     window.innerHeight + window.scrollY >= document.body.offsetHeight;
 
-    if (isActive && isPageEnd && !q(LOGO).classList.contains('active')) {
+    if (isActive) {
       try {
         offsetTrending += limit;
         if (offsetTrending === 4999) offsetTrending = 0;
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const isPageEnd =
     window.innerHeight + window.scrollY >= document.body.offsetHeight;
 
-    if (isActive && isPageEnd && !q(LOGO).classList.contains('active')) {
+    if (isActive) {
       try {
         offsetTrending += limit;
         if (offsetTrending === 4999) offsetTrending = 0;
