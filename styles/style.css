@@ -371,9 +371,9 @@ nav > .active {
 button#fav {
   color: #ff0090;
   background-color: var(--text-light);
-  height: 2em;
-  width: 2em;
-  border-radius: calc(var(--border-radius) * 2);
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: calc(var(--border-radius) * 2.5);
   font-size: 1.1em;
   box-sizing: border-box;
   cursor: pointer;
