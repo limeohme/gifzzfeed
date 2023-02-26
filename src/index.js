@@ -101,8 +101,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       .querySelector('[data-target-page="trending"]')
       .classList.contains('active');
     const isPageEnd =
-      window.scrollY >
-      document.documentElement.offsetHeight - window.outerHeight;
+    window.innerHeight + window.scrollY >= document.body.offsetHeight;
 
     if (isActive && isPageEnd && !q(LOGO).classList.contains('active')) {
       try {
